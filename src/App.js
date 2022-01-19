@@ -1,8 +1,14 @@
 import React from "react";
-import ReactDOM from "react-dom";
+
 import "./index.css";
-import Feedback from "./App";
+import Feedback from "./components/Feedback";
+import Statistics from "./components/Statistics";
 
 export default function App() {
-  return <Feedback />;
+  return (
+    <div>
+      <Feedback />
+      <Statistics />
+    </div>
+  );
 }
