@@ -1,5 +1,8 @@
-import "./App.css";
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import Feedback from "./App";
 
-function App() {}
-
-export default App;
+export default function App() {
+  return <Feedback />;
+}
