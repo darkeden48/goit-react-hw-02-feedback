@@ -29,10 +29,8 @@ class Feedback extends React.Component {
         <h1>Please leave Feedback</h1>
 
         <button onClick={this.upgradeValue}>{this.state.good}</button>
-        <button onClick={() => console.log("neutral")}>
-          {this.state.neutral}
-        </button>
-        <button onClick={() => console.log("bad")}>{this.state.bad}</button>
+        <button onClick={this.upgradeValue}>{this.state.neutral}</button>
+        <button onClick={this.upgradeValue}>{this.state.bad}</button>
       </div>
     );
   }
