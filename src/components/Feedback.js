@@ -16,11 +16,18 @@ class Feedback extends React.Component {
     bad: 0,
   };
   upgradeValue = (event) => {
+    console.log(event.target);
+    const target = event.target;
     this.setState((prevState) => {
-      return { good: this.state.good + 1 };
+      console.log(target);
+
+      return {
+        good: this.state.good + 1,
+        neutral: this.state.neutral + 1,
+        bad: this.state.bad + 1,
+      };
     });
   };
-
   countTotalFeedback() {}
   countPositiveFeedbackPercentage() {}
   render() {
@@ -28,9 +35,15 @@ class Feedback extends React.Component {
       <div>
         <h1>Please leave Feedback</h1>
 
-        <button onClick={this.upgradeValue}>{this.state.good}</button>
-        <button onClick={this.upgradeValue}>{this.state.neutral}</button>
-        <button onClick={this.upgradeValue}>{this.state.bad}</button>
+        <button data="good" onClick={this.upgradeValue}>
+          {this.state.good}
+        </button>
+        <button data="neutral" onClick={this.upgradeValue}>
+          {this.state.neutral}
+        </button>
+        <button data="bad" onClick={this.upgradeValue}>
+          {this.state.bad}
+        </button>
       </div>
     );
   }
